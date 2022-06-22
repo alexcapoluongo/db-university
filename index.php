@@ -16,7 +16,7 @@ $departments = [];
 //controllo se il result esiste e se non è vuoto
 if ($result && $result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        $curr_department = new Department($row['id'], $row['name']);
+        $curr_department = new Department($row['id'], $row['name'], $row['address'], $row['phone'], $row['email'], $row['website'], $row['head_of_department']);
         $departments[] = $curr_department;
     }
 } elseif ($result){
@@ -37,7 +37,8 @@ if ($result && $result->num_rows > 0) {
 <body> 
     <?php 
         foreach ($departments as $item) {
-            echo '<h1>' . $item->name . '</h1>';
+            echo '<h1>' . $item->id . ' | ' . $item->name . '</h1>';
+            echo '<a href="single-department.php">Vedi i dettagli</a>';
         } 
     ?>
    
