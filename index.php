@@ -38,7 +38,7 @@ if ($result && $result->num_rows > 0) {
     <?php 
         foreach ($departments as $item) {
             echo '<h1>' . $item->id . ' | ' . $item->name . '</h1>';
-            echo '<a href="single-department.php">Vedi i dettagli</a>';
+            echo '<a href="single-department.php?id='. $item->id .'">Vedi i dettagli</a>';
         } 
     ?>
    
