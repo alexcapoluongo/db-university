@@ -35,5 +35,7 @@ if($result && $result->num_rows > 0) {
         echo $department->printInfo();
     }
     ?>
+    <br>
+    <a href="index.php">Ritorna alla lista dei dipartimenti</a>
 </body>
 </html>
